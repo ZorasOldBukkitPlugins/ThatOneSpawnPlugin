@@ -1,0 +1,47 @@
+name: ThatOneSpawnPlugin
+version: 1.0.0
+description: This plugin is too easy for smart people like you, who deserves something more in life
+author: MrZoraman
+main: com.mrz.dyndns.server.ThatOneSpawnPlugin.ThatOneSpawnPlugin
+prefix: TOSP
+commands:
+  spawn:
+    description: Takes you to spawn
+    permission: spawn.goToSpawn
+    permission-message: You do not have permission to go to spawn!
+    usage: /<command>
+  setspawn:
+    description: Sets the spawn
+    permission: spawn.setSpawn
+    permission-message: You do not have permission to set the spawn!
+    usage: /<command>
+  reloadspawn:
+    description: Reloads the spawn from the config.yml
+    permission: spawn.reloadSpawn
+    permission-message: You do not have permission to reload the spawn!
+    usage: /<command>
+permissions:
+  spawn.goToSpawn:
+    description: Allows one to go to spawn
+    default: true
+  spawn.setSpawn:
+    description: Allows one to set the spawn
+    default: op
+  spawn.reloadSpawn:
+    description: Allows one to reload the spawn
+    default: op
+  spawn.user:
+    description: Allows standard use of the spawn plugin
+    children:
+      spawn.goToSpawn: true
+  spawn.admin:
+    description: Allows admin use of the spawn plugin
+    children:
+      spawn.setSpawn: true
+      spawn.reloadSpawn: true
+  spawn.*:
+    description: Allows full use of the spawn plugin
+    children:
+      spawn.goToSpawn: true
+      spawn.setSpawn: true
+      spawn.reloadSpawn: true
