@@ -3,6 +3,7 @@ version: 1.0.0
 description: This plugin is too easy for smart people like you, who deserves something more in life
 author: MrZoraman
 main: com.mrz.dyndns.server.ThatOneSpawnPlugin.ThatOneSpawnPlugin
+website: http://dev.bukkit.org/bukkit-plugins/that-one-spawn-plugin/
 prefix: TOSP
 commands:
   spawn:
