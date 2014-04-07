@@ -100,7 +100,6 @@ public class SpawnManager
 	 */
 	public Location getDefaultSpawn()
 	{
-		System.out.println("retrieving default spawn...");
 		return plugin.getServer().getWorlds().get(0).getSpawnLocation();
 	}
 	
