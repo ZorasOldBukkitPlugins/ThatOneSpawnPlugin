@@ -18,6 +18,7 @@ public class ThatOneSpawnPlugin extends JavaPlugin
 	{
 		//Copy default values to the config
 		getConfig().options().copyDefaults(true);
+		saveConfig();
 		
 		//Instantiate that good stuff
 		spawnManager = new SpawnManager(this);
