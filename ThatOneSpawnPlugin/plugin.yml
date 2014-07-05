@@ -1,6 +1,6 @@
 name: ThatOneSpawnPlugin
 version: 1.0.2
-description: This plugin is too easy for smart people like you, who deserves something more in life
+description: One spawn. No questions.
 author: MrZoraman
 main: com.mrz.dyndns.server.ThatOneSpawnPlugin.ThatOneSpawnPlugin
 website: http://dev.bukkit.org/bukkit-plugins/that-one-spawn-plugin/
