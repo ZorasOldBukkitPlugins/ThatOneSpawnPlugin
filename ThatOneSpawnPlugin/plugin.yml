@@ -1,5 +1,5 @@
 name: ThatOneSpawnPlugin
-version: 1.0.2
+version: 1.0.3
 description: One spawn. No questions.
 author: MrZoraman
 main: com.mrz.dyndns.server.ThatOneSpawnPlugin.ThatOneSpawnPlugin

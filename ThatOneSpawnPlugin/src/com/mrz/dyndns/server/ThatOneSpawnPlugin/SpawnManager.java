@@ -100,7 +100,11 @@ public class SpawnManager
 	 */
 	public Location getDefaultSpawn()
 	{
-		return plugin.getServer().getWorlds().get(0).getSpawnLocation();
+		//Get the tallest block at that location. Sometimes the default spawn is in the middle of the ground, which can cause suffocation.
+		World defaultWorld = plugin.getServer().getWorlds().get(0);
+		Location loc = defaultWorld.getSpawnLocation();
+		loc.setY(defaultWorld.getHighestBlockYAt(loc));
+		return loc;
 	}
 	
 	/**
