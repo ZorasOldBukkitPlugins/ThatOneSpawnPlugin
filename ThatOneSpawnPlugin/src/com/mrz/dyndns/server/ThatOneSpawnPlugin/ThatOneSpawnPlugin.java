@@ -52,6 +52,6 @@ public class ThatOneSpawnPlugin extends JavaPlugin
 		getServer().getPluginManager().registerEvents(new SpawnChangedListener(spawnManager, letOthersChangeSpawn), this);
 		
 		//this event is always registered
-		getServer().getPluginManager().registerEvents(new PlayerJoinListener(spawnManager), this);
+		getServer().getPluginManager().registerEvents(new PlayerJoinListener(this, spawnManager), this);
 		}
 }
