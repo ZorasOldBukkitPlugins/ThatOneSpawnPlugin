@@ -1,8 +1,6 @@
 package com.mrz.dyndns.server.ThatOneSpawnPlugin;
 
-import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.event.player.PlayerRespawnEvent;
-import org.bukkit.event.world.SpawnChangeEvent;
+import org.bukkit.event.HandlerList;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.mrz.dyndns.server.ThatOneSpawnPlugin.EventListeners.*;
@@ -37,11 +35,8 @@ public class ThatOneSpawnPlugin extends JavaPlugin
 	 */
 	public void reloadEvents()
 	{
-		//Unregister the event that could have potentially changed
-		PlayerRespawnEvent.getHandlerList().unregister(this);
-		//I unregister all of them just to make certain that I only have one instance registered at a time
-		PlayerJoinEvent.getHandlerList().unregister(this);
-		SpawnChangeEvent.getHandlerList().unregister(this);
+		//Unregister all events
+		HandlerList.unregisterAll(this);
 		
 		//Re-register it if applicable
 		if(getConfig().getBoolean("GoToSpawnOnDeath"))
