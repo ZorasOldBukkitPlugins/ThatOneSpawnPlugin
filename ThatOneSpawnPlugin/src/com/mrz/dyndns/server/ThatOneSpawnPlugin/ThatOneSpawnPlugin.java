@@ -49,5 +49,5 @@ public class ThatOneSpawnPlugin extends JavaPlugin
 		
 		//this event is always registered
 		getServer().getPluginManager().registerEvents(new PlayerJoinListener(this, spawnManager), this);
-		}
+	}
 }
